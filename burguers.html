@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍔BURGUER`S</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('products')">Principais |</a>
+                    <a href="#" onclick="showSection('cart')">Carrinho</a>
+                    </li>
+            </ul>
+        </nav>
+          <section class="atalhos">
+            <div class="">
+              <button class="atalhos">
+                <a href="#" onclick="showSection('products')"><b>Hamburguer</b></a>
+                </button>
+                
+            <button class="">
+                <a href="#" onclick="showSection('pizzas')"><b>Pizzas</b></a>
+                </button>
+            
+            <button class="">
+                <a href="#" onclick="showSection('bebidas')"><b>Bebidas</b></a>
+                </button>
+              
+            <button class="">
+                <a href="#" onclick="showSection('products')"><b>Mais Pedidos</b></a>
+                </button>
+            </div>
+          </section>
+          <div class="search-container">
+        <input type="text" id="searchInput" placeholder="X-salada...">
+        <button onclick="search()">🔍</button>
+    </div>
+    <div id="searchResults"></div>
+    </header>
+    <div id="home" class="container">
+        <h2> ✨
+Bem-vindo à Hamburgueria Burguer Delicious!🍔
+</h2>
+ <h4> 
+ Aqui, o sabor é a nossa paixão e cada mordida é uma experiência única. Venha
+ experimentar nossos hambúrgueres artesanais, feitos com ingredientes frescos e
+ receitas exclusivas que prometem conquistar o seu paladar. Na Burguer
+ Delicious, cada refeição é preparada com carinho para proporcionar momentos
+ deliciosos e inesquecíveis.
+ </h4>
+</div>
+
+
+    <div id="products" class="container hidden">
+        <div class="card">
+            <img src="produto2.jpg" alt="Produto">
+            <img src="produto3.jpg" alt="Produto">
+            <h3>X-Salada</h3>
+            <p>- 1 pão de hambúrguer <br>
+- 1 hambúrguer de carne bovina (ou de sua preferência)<br>
+- 1 fatia de queijo<br>
+- 2 folhas de alface<br>
+- 2 rodelas de tomate<br>
+- 1 fatia de presunto<br>
+- 1 ovo frito (opcional)<br>
+- Maionese, ketchup e mostarda a gosto</p>
+            <h4><strong>R$ 19,90</strong></h4>
+            <button class="btn" onclick="addToCart('X-Salada', 19.90)">Comprar</button>
+        </div>
+        
+        <div class="card">
+            <img src="xtudo.jpg" alt="Produto">
+            <img src="produto3.jpg" alt="Produto">
+            <h3>X-Tudo</h3>
+            <p>- 1 pão de hambúrguer <br>
+- 1 hambúrguer de carne bovina (ou de sua preferência)<br>
+- 1 fatia de queijo<br>
+- 2 folhas de alface<br>
+- 2 rodelas de tomate<br>
+- 1 fatia de presunto<br>
+- 1 ovo frito (opcional)<br>
+- Maionese, ketchup e mostarda a gosto</p>
+            <h4><strong>R$ 22,90</strong></h4>
+            <button class="btn" onclick="addToCart('X-Tudo', 22.90)">Comprar</button>
+        </div>
+        
+        <div class="card">
+            <img src="big.jpg" alt="Produto">
+            <img src="produto3.jpg" alt="Produto">
+            <h3>Big Mac</h3>
+            <p>- 1 pão de hambúrguer <br>
+- 1 hambúrguer de carne bovina (ou de sua preferência)<br>
+- 1 fatia de queijo<br>
+- 2 folhas de alface<br>
+- 2 rodelas de tomate<br>
+- 1 fatia de presunto<br>
+- 1 ovo frito (opcional)<br>
+- Maionese, ketchup e mostarda a gosto</p>
+            <h4><strong>R$ 28,90</strong></h4>
+            <button class="btn" onclick="addToCart('Big Mac', 28.90)">Adicionar</button>
+        </div>
+  
+ </div>
+ 
+ <div id="pizzas" class="container hidden">
+        <div class="card">
+            <img src="calabresa.jpg" alt="Produto">
+            <img src="calabresa2.jpg" alt="Produto">
+            <h3>Calabresa Tam. G</h3>
+            <p>- 1 pão de hambúrguer <br>
+- 1 hambúrguer de carne bovina (ou de sua preferência)<br>
+- 1 fatia de queijo<br>
+- 2 folhas de alface<br>
+- 2 rodelas de tomate<br>
+- 1 fatia de presunto<br>
+- 1 ovo frito (opcional)<br>
+- Maionese, ketchup e mostarda a gosto</p>
+            <h4><strong>R$ 70,90</strong></h4>
+            <button class="btn" onclick="addToCart('Calabresa Tamanho G', 70.90)">Comprar</button>
+        </div>
+        
+        <div class="card">
+            <img src="quatro.jpg" alt="Produto">
+            <img src="calabresa2.jpg" alt="Produto">
+            <h3>4 Queijos Tam. M</h3>
+            <p>- 1 pão de hambúrguer <br>
+- 1 hambúrguer de carne bovina (ou de sua preferência)<br>
+- 1 fatia de queijo<br>
+- 2 folhas de alface<br>
+- 2 rodelas de tomate<br>
+- 1 fatia de presunto<br>
+- 1 ovo frito (opcional)<br>
+- Maionese, ketchup e mostarda a gosto</p>
+            <h4><strong>R$ 60,90</strong></h4>
+            <button class="btn" onclick="addToCart('4 Queijos Tamanho M', 60.90)">Comprar</button>
+        </div>
+  </div>
+  
+<div id="bebidas" class="container hidden">
+        <div class="card">
+            <img src="coca.jpg" alt="Produto">
+            <img src="coca2.jpg" alt="Produto">
+            <h3>Coca-Cola 2L</h3>
+            <h4><strong>R$ 10,90</strong></h4>
+            <button class="btn" onclick="addToCart('Coca-Cola 2L', 10.90)">Comprar</button>
+        </div>
+  </div>
+  
+  
+    <div id="cart" class="container hidden">
+        <h3>Pedido</h3>
+        <div id="cartItems"></div>
+        <p><strong>Total: R$ <span id="totalPrice">0.00</span></strong></p>
+        <div class="form-group">
+            <label for="deliveryOption">Opções de Entrega:</label>
+            <select id="deliveryOption" onchange="showDeliveryForm()">
+                <option value="">Selecione</option>
+                <option value="retirada">Retirada</option>
+                <option value="entrega">Entrega Taxa R$ 10,00</option>
+            </select>
+        </div>
+        <div id="retiradaForm" class="hidden">
+            <div class="form-group">
+                <label for="retiradaNome">Nome:</label>
+                <input type="text" id="retiradaNome">
+            </div>
+            <div class="form-group">
+                <label for="retiradaContato">Contato:</label>
+                <input type="text" id="retiradaContato">
+            </div>
+        </div>
+        <div id="entregaForm" class="hidden">
+            <div class="form-group">
+                <label for="entregaNome">Nome:</label>
+                <input type="text" id="entregaNome">
+            </div>
+            <div class="form-group">
+                <label for="entregaEndereco">Endereço Completo:</label>
+                <input type="text" id="entregaEndereco">
+            </div>
+            <div class="form-group">
+                <label for="entregaPagamento">Forma de Pagamento:</label>
+                <input type="text" id="entregaPagamento">
+            </div>
+            <div class="form-group">
+                <label for="entregaResponsavel">Responsável pelo Recebimento:</label>
+                <input type="text" id="entregaResponsavel">
+            </div>
+        </div>
+        <button class="btn" onclick="finalizeOrder()">Finalizar Pedido</button>
+    </div>
+  
+    <div id="notification" class="notification"></div>
+    
+<footer>
+  <p class="footer">Coprigth©AtecSeven Tecnologia 2019<br>
+  WWW.ATECSEVEN.COM.BR</p>
+  
+</footer>
+
+<script>
+  function search() {
+    const query = document.getElementById('searchInput').value.toLowerCase();
+    const resultsContainer = document.getElementById('searchResults');
+    const cards = document.querySelectorAll('#products .card');
+    resultsContainer.innerHTML = ''; // Limpa resultados anteriores
+
+    if (query.trim() === '') {
+        resultsContainer.innerHTML = 'Por favor, insira um termo de pesquisa.';
+        return;
+    }
+
+    let resultsFound = false;
+
+    cards.forEach(card => {
+        const h3 = card.querySelector('h3');
+        if (h3.textContent.toLowerCase().includes(query)) {
+            card.style.display = 'block'; // Mostra o card que contém o termo de pesquisa
+            resultsFound = true;
+        } else {
+            card.style.display = 'none'; // Esconde os cards que não contêm o termo de pesquisa
+        }
+    });
+
+    if (!resultsFound) {
+        resultsContainer.innerHTML = 'Nenhum resultado encontrado.';
+    } else {
+        resultsContainer.innerHTML = ''; // Limpa mensagem de "Nenhum resultado encontrado" se encontrar algo
+    }
+}
+
+function showSection(section) {
+    const sections = document.querySelectorAll('.container');
+    sections.forEach(sec => {
+        if (sec.id === section) {
+            sec.classList.remove('hidden');
+        } else {
+            sec.classList.add('hidden');
+        }
+    });
+}
+  
+        let cart = [];
+        let totalPrice = 0;
+
+        function showSection(sectionId) {
+            document.querySelectorAll('.container').forEach(section => {
+                section.classList.add('hidden');
+            });
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+
+        function addToCart(productName, price) {
+            cart.push({name: productName, price: price});
+            showNotification(`${productName} foi adicionado ao seu Pedido!🛍️`);
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cartItems');
+            cartItems.innerHTML = '';
+            totalPrice = 0;
+
+            cart.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.classList.add('cart-item');
+                itemElement.innerHTML = `
+                    <p>${item.name}</p>
+                    <p>R$ ${item.price.toFixed(2)}</p>
+                `;
+                cartItems.appendChild(itemElement);
+                totalPrice += item.price;
+            });
+
+            document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+        }
+
+        function showDeliveryForm() {
+            const deliveryOption = document.getElementById('deliveryOption').value;
+            document.getElementById('retiradaForm').classList.add('hidden');
+            document.getElementById('entregaForm').classList.add('hidden');
+
+            if (deliveryOption === 'retirada') {
+                document.getElementById('retiradaForm').classList.remove('hidden');
+            } else if (deliveryOption === 'entrega') {
+                document.getElementById('entregaForm').classList.remove('hidden');
+            }
+        }
+
+        function finalizeOrder() {
+    const deliveryOption = document.getElementById('deliveryOption').value;
+    let orderDetails = 'Pedido:\n';
+    let deliveryFee = 0;
+
+    cart.forEach(item => {
+        orderDetails += `${item.name}: R$ ${item.price.toFixed(2)}\n`;
+    });
+
+    if (deliveryOption === 'entrega') {
+        deliveryFee = 10; // Taxa de entrega
+    }
+
+    totalPrice += deliveryFee;
+    orderDetails += `Taxa de Entrega: R$ ${deliveryFee.toFixed(2)}\n`;
+    orderDetails += `Total: R$ ${totalPrice.toFixed(2)}\n`;
+
+    if (deliveryOption === 'retirada') {
+        const retiradaNome = document.getElementById('retiradaNome').value;
+        const retiradaContato = document.getElementById('retiradaContato').value;
+        orderDetails += `Opção de Entrega: Retirada\n`;
+        orderDetails += `Nome: ${retiradaNome}\n`;
+        orderDetails += `Contato: ${retiradaContato}\n`;
+    } else if (deliveryOption === 'entrega') {
+        const entregaNome = document.getElementById('entregaNome').value;
+        const entregaEndereco = document.getElementById('entregaEndereco').value;
+        const entregaPagamento = document.getElementById('entregaPagamento').value;
+        const entregaResponsavel = document.getElementById('entregaResponsavel').value;
+        orderDetails += `Opção de Entrega: Entrega\n`;
+        orderDetails += `Nome: ${entregaNome}\n`;
+        orderDetails += `Endereço: ${entregaEndereco}\n`;
+        orderDetails += `Forma de Pagamento: ${entregaPagamento}\n`;
+        orderDetails += `Responsável pelo Recebimento: ${entregaResponsavel}\n`;
+    }
+
+    const whatsappUrl = `https://wa.me/5564992952748?text=${encodeURIComponent(orderDetails)}`;
+    window.open(whatsappUrl, '_blank');
+}
+
+        function showNotification(message) {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            notification.style.opacity = '1';
+            notification.style.display = 'block';
+            
+            setTimeout(() => {
+                notification.style.opacity = '0';
+            }, 3000); // Exibe por 3 segundos
+
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 3500); // Tempo extra para o fade-out
+        }
+
+        // Exibir seção inicial
+        showSection('home');
+    </script>
+</body>
+</html>

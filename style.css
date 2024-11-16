@@ -1,0 +1,274 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: #444;
+}
+
+.logo{
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #ff5722;
+  width: 110px;
+  text-align: center;
+}
+
+.corpo{
+  width: 100%;
+  border-radius: 10px;
+  margin: 0px 0px;
+}
+header {
+height: 246px;
+background: url('corpo.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 1px;
+    color: white;
+    padding: 2px;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+    width: 300px;
+}
+P{
+  font-size: 12px;
+  color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  text-align: left;
+  color: black;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+p{
+  text-align: left;
+}
+h9{
+  text-align: center;
+}
+h4{
+  font-size: 17px;
+  color: #ff5722;
+}
+.footer{
+  text-align: center;
+  color: black;
+  align-items: center;
+  margin: 7%;
+}
+.atalhos{
+  text-align: center;
+  font-size: 16px;
+  padding: 2px;
+  padding-top: 2px;
+}
+
+.atalhos button{
+  padding: 5px;
+  color: white;
+  background-color: ;
+  border-style: solid 4px;
+  border-radius: 5px;
+  border-color: white;
+  padding-top: 2px;
+  width: 133px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.search-container {
+    display: block;
+    margin-top: 2px;
+    text-align: center;
+}
+
+#searchInput {
+    text-align: left;
+    width: 220px;
+    padding: 3px;
+    border: 5px solid white;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 14px;
+}
+
+button {
+    padding: 5px 5px;
+    border-radius: 0 10px 10px 0;
+    background-color: #ff5722;
+    border-style: solid;
+    border-color: white;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: green;
+}
+
+nav ul li {
+    margin: 0 0px;
+}
+h1{
+  color: #ff5722;
+}
+nav ul li a {
+    color: #ff5722;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #444;
+}
+
+.container {
+    padding: 10px;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card img {
+    max-width: 150px;
+    max-height: 160px;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #ff5722;
+}
+
+.btn {
+    background-color: #ff5722;
+    color: #ffffff;
+    padding: 2px 2px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: green;
+}
+
+.hidden {
+    display: none;
+}
+
+#cartItems {
+    margin-bottom: 0px;
+}
+
+.cart-item {
+    background-color: #ffffff;
+    border-bottom: 1px solid #dddddd;
+    padding: 0px 0;
+}
+
+.cart-item p {
+    margin: 0px 0;
+    font-size: 0.9em;
+}
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 0.9em;
+    display: block;
+}
+
+
+.notification {
+    background-color: green; /* Laranja */
+    color: white;
+    padding: 15px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+    z-index: 1000; /* Para garantir que a notificação fique acima de outros elementos */
+}
+
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    nav ul li {
+        margin: 0px 0;
+        padding: 0px;
+    }
+}

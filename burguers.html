@@ -11,8 +11,8 @@
         <img src="logo.jpg" class="logo">
         <nav>
             <ul>
-                <li><a href="#" onclick="showSection('products')">Principais |</a>
-                    <a href="#" onclick="showSection('cart')">Carrinho</a>
+                <li><a href="#" onclick="showSection('products')">🏆Principais |</a>
+                    <a href="#" onclick="showSection('cart')">Pedido🛒</a>
                     </li>
             </ul>
         </nav>
@@ -69,7 +69,7 @@ Bem-vindo à Hamburgueria Burguer Delicious!🍔
 - 1 ovo frito (opcional)<br>
 - Maionese, ketchup e mostarda a gosto</p>
             <h4><strong>R$ 19,90</strong></h4>
-            <button class="btn" onclick="addToCart('X-Salada', 19.90)">Comprar</button>
+            <button class="btn" onclick="addToCart('X-Salada', 19.90)">Adicionar</button>
         </div>
         
         <div class="card">
@@ -85,7 +85,7 @@ Bem-vindo à Hamburgueria Burguer Delicious!🍔
 - 1 ovo frito (opcional)<br>
 - Maionese, ketchup e mostarda a gosto</p>
             <h4><strong>R$ 22,90</strong></h4>
-            <button class="btn" onclick="addToCart('X-Tudo', 22.90)">Comprar</button>
+            <button class="btn" onclick="addToCart('X-Tudo', 22.90)">Adicionar</button>
         </div>
         
         <div class="card">
@@ -120,7 +120,7 @@ Bem-vindo à Hamburgueria Burguer Delicious!🍔
 - 1 ovo frito (opcional)<br>
 - Maionese, ketchup e mostarda a gosto</p>
             <h4><strong>R$ 70,90</strong></h4>
-            <button class="btn" onclick="addToCart('Calabresa Tamanho G', 70.90)">Comprar</button>
+            <button class="btn" onclick="addToCart('Calabresa Tamanho G', 70.90)">Adicionar</button>
         </div>
         
         <div class="card">
@@ -136,7 +136,7 @@ Bem-vindo à Hamburgueria Burguer Delicious!🍔
 - 1 ovo frito (opcional)<br>
 - Maionese, ketchup e mostarda a gosto</p>
             <h4><strong>R$ 60,90</strong></h4>
-            <button class="btn" onclick="addToCart('4 Queijos Tamanho M', 60.90)">Comprar</button>
+            <button class="btn" onclick="addToCart('4 Queijos Tamanho M', 60.90)">Adicionar</button>
         </div>
   </div>
   
@@ -146,13 +146,36 @@ Bem-vindo à Hamburgueria Burguer Delicious!🍔
             <img src="coca2.jpg" alt="Produto">
             <h3>Coca-Cola 2L</h3>
             <h4><strong>R$ 10,90</strong></h4>
-            <button class="btn" onclick="addToCart('Coca-Cola 2L', 10.90)">Comprar</button>
+            <button class="btn" onclick="addToCart('Coca-Cola 2L', 10.90)">Adicionar</button>
+        </div>
+
+        <div class="card">
+            <img src="uva.jpg" alt="Produto">
+            <img src="uvacopo.jpg" alt="Produto">
+            <h3>Sukita Uva 2L</h3>
+            <h4><strong>R$ 8,90</strong></h4>
+            <button class="btn" onclick="addToCart('Sukita Uva 2L', 8.90)">Adicionar</button>
+        </div>
+        
+        <div class="card">
+            <img src="guarana.jpg" alt="Produto">
+            <img src="guaranacopo.jpg" alt="Produto">
+            <h3>Fanta Guaraná 2L</h3>
+            <h4><strong>R$ 9,90</strong></h4>
+            <button class="btn" onclick="addToCart('Fanta Guaraná 2L', 9.90)">Adicionar</button>
+        </div>
+        <div class="card">
+            <img src="laranja.jpg" alt="Produto">
+            <img src="laranjacopo.jpg" alt="Produto">
+            <h3>Fanta Laranja 2L</h3>
+            <h4><strong>R$ 10,90</strong></h4>
+            <button class="btn" onclick="addToCart('Fanta Laranja 2L', 10.90)">Adicionar</button>
         </div>
   </div>
   
   
     <div id="cart" class="container hidden">
-        <h3>Pedido</h3>
+        <h3></h3>
         <div id="cartItems"></div>
         <p><strong>Total: R$ <span id="totalPrice">0.00</span></strong></p>
         <div class="form-group">
@@ -349,4 +372,4 @@ function showSection(section) {
         showSection('home');
     </script>
 </body>
-</html>
+                                                                                   </html>

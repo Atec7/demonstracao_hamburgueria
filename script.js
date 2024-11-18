@@ -88,11 +88,11 @@ function showSection(section) {
 
         function finalizeOrder() {
     const deliveryOption = document.getElementById('deliveryOption').value;
-    let orderDetails = 'Pedido:\n';
+    let orderDetails = '*Pedido:*\n *_________________*\n';
     let deliveryFee = 0;
 
     cart.forEach(item => {
-        orderDetails += `${item.name}: R$ ${item.price.toFixed(2)}\n`;
+        orderDetails += `[•] ${item.name}: R$ ${item.price.toFixed(2)}\n`;
     });
 
     if (deliveryOption === 'entrega') {
@@ -100,15 +100,17 @@ function showSection(section) {
     }
 
     totalPrice += deliveryFee;
-    orderDetails += `Taxa de Entrega: R$ ${deliveryFee.toFixed(2)}\n`;
-    orderDetails += `Total: R$ ${totalPrice.toFixed(2)}\n`;
+    orderDetails += `Taxa de Entrega: R$ ${deliveryFee.toFixed(2)}\n *_________________*`;
+    
+    orderDetails += `\n *Total:* R$ ${totalPrice.toFixed(2)}\n
+    \n *_________________* \n` ;
 
     if (deliveryOption === 'retirada') {
         const retiradaNome = document.getElementById('retiradaNome').value;
         const retiradaContato = document.getElementById('retiradaContato').value;
-        orderDetails += `Opção de Entrega: Retirada\n`;
-        orderDetails += `Nome: ${retiradaNome}\n`;
-        orderDetails += `Contato: ${retiradaContato}\n`;
+        orderDetails += `*Opção de Entrega:* Retirada\n \n`;
+        orderDetails += `*Nome:* ${retiradaNome}\n\n`;
+        orderDetails += `*Contato:* ${retiradaContato}\n\n`;
     } else if (deliveryOption === 'entrega') {
         const entregaNome = document.getElementById('entregaNome').value;
         const entregaEndereco = document.getElementById('entregaEndereco').value;
